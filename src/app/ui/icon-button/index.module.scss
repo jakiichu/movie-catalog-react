@@ -1,0 +1,19 @@
+.iconButton {
+  padding: 4px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color .2s;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $bg-core-dark;
+  }
+
+  &>svg{
+    margin: auto 0;
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+}
