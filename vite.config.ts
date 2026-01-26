@@ -14,7 +14,7 @@ export default defineConfig({
       scss: {
         loadPaths: [path.resolve(__dirname, "src")],
         additionalData: `
-          @use "common/styles/variables" as *;
+          @use "app/common/styles/variables" as *;
         `
       }
     }

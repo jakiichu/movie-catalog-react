@@ -1,11 +1,17 @@
-@import "modern-normalize";
+@use "modern-normalize";
 
-$accent-blue: #3877EE;
-$accent-pink: #EF5DA8;
+body {
+  background-color: $bg-core-light;
 
-$iris-100: #5D5FEF;
-$fuschia-100: #EF5DA8;
 
-$black-blue: #42567A;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 
-$white: #FFFFFF;
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $bg-core-dark;
+    color: $bg-core-light;
+  }
+}
