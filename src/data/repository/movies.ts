@@ -24,7 +24,9 @@ class MovieRepository implements IMovieRepository {
 
     getAll(port: IGetAllMoviePort): Promise<IGetAllMovieDto> {
         return new Promise((resolve) => {
-            resolve(this.database.getAll(port))
+            setTimeout(() => {
+                resolve(this.database.getAll(port))
+            }, 2000)
         })
     }
 

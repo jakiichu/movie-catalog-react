@@ -1,11 +1,21 @@
 .dimWrapper {
   padding: 16px;
-  background-color: $bg-main-light;
   border-radius: 16px;
   width: fit-content;
 
 
+}
+
+.mainColor {
+  background-color: $bg-main-light;
   @media (prefers-color-scheme: dark) {
     background-color: $bg-main-dark;
+  }
+}
+
+.additionalColor {
+  background-color: $bg-core-light;
+  @media (prefers-color-scheme: dark) {
+    background-color: $bg-core-dark;
   }
 }

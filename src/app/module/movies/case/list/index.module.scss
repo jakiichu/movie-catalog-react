@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 8px;
   gap: 16px;
-
+  position: relative;
 }
 
 .topBar {
@@ -19,5 +19,24 @@
 .mainContent {
   height: 100%;
   width: 100%;
+}
 
+.circleLoading {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
