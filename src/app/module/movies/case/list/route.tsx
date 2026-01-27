@@ -11,17 +11,18 @@ import {CircleNotchIcon} from "@phosphor-icons/react";
 import type {IGetAllMovieDto} from "@/domain/movies/interface";
 
 const Route = (): ReactNode => {
-    const {data, isLoading = true} = useGetAllMoviesPresenter()
-    console.log(data, isLoading)
+    const {data, isLoading = true, form} = useGetAllMoviesPresenter()
+
     return (
         <div className={style.wrapper}>
             <DimWrapper className={style.topBar}>
-                <Search/>
+                <Search form={form}/>
+                <MoviesListFilter form={form}/>
+
                 <AddMovies/>
             </DimWrapper>
             <DimWrapper className={style.mainContent}>
 
-                <MoviesListFilter/>
                 {/*Вроде логичней выглядит что можно поставить ! в начале, но уже привык что линтер настроен так что если можно написать без ! то напишу так*/}
                 {isLoading ? <CircleNotchIcon className={style.circleLoading}/> :
                     <MoviesList data={data as IGetAllMovieDto}/>}
