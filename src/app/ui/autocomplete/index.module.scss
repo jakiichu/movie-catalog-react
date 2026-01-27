@@ -1,0 +1,46 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  border: solid 1px #ccc;
+  background: $bg-main-dark;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 10px;
+  width: 100%;
+
+  &:not(:placeholder-shown) {
+    padding-right: 24px;
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 4px;
+  top: 6px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: $bg-main-dark;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.item {
+  padding: 8px 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: #2c2c2c;
+  }
+}

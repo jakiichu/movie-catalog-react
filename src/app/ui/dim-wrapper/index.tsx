@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import styles from "./index.module.scss"
+import style from "./index.module.scss"
 import {cn} from "@/app/utils/cn.ts";
 import type {IDimWrapperProps} from "./interface.ts";
 
@@ -7,8 +7,8 @@ import type {IDimWrapperProps} from "./interface.ts";
 
 // чтоб не писать свичкейсы можно вот такую красоту написать и получится рабочий вариант
 const colorVariants = {
-    main: styles.mainColor,
-    additional: styles.additionalColor
+    main: style.mainColor,
+    additional: style.additionalColor
 }
 
 const DimWrapper = ({
@@ -17,7 +17,7 @@ const DimWrapper = ({
                         ...props
                     }: IDimWrapperProps): ReactNode => {
     return (
-        <div className={cn(colorVariants[color], styles.dimWrapper, className)} {...props}/>
+        <div className={cn(colorVariants[color], style.dimWrapper, className)} {...props}/>
     );
 };
 

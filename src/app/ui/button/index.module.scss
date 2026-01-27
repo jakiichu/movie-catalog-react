@@ -1,20 +1,14 @@
-.iconButton {
+.button {
   padding: 4px;
   border-radius: 8px;
-  background-color: transparent;
+  background-color: $bg-core-dark;
   border: 1px solid transparent;
   transition: background-color .2s;
   cursor: pointer;
+  color: white;
 
   &:hover {
-    background-color: $bg-core-dark;
-  }
-
-  & > svg {
-    margin: auto 0;
-    fill: white;
-    width: 24px;
-    height: 24px;
+    background-color: rgba($bg-core-dark, 1.2);
   }
 }
 

@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: $bg-main-dark;
+  padding-right: 22px;
+}
+
+.input {
+  flex: 1;
+  min-width: 120px;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 6px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: #2c2c2c;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.remove {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.addIcon {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
