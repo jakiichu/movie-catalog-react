@@ -1,6 +1,19 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  gap:8px;
+  gap: 8px;
   align-items: center;
+}
+
+.popoverList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buttonPopover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
 }

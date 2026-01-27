@@ -28,15 +28,26 @@
   left: 0;
   right: 0;
   background: $bg-main-dark;
-  border: 1px solid #333;
+
+  background: $bg-main-dark;
   border-radius: 8px;
   margin-top: 4px;
+
   max-height: 200px;
   overflow-y: auto;
   z-index: 1000;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .item {
+  list-style: none;
+  display: inline-block;
+  &::marker{
+    display: none;
+  }
   padding: 8px 10px;
   cursor: pointer;
 

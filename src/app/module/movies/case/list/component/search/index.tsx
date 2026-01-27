@@ -9,7 +9,7 @@ const Search = ({form}: IFilteredProps): ReactNode => {
     return (
         <div className={style.wrapper}>
             <Input {...form.register('search')} placeholder='Поиск...'/>
-            <IconButton><MagnifyingGlassIcon/></IconButton>
+            <IconButton className={style.iconButton}><MagnifyingGlassIcon/></IconButton>
         </div>
     );
 };
