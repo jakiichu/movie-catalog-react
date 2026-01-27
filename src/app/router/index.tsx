@@ -5,8 +5,8 @@ import {CreateMoviesRoute} from "@/app/module/movies/case/create";
 import {EditMoviesRoute} from "@/app/module/movies/case/edit";
 import {DeleteMoviesRoute} from "@/app/module/movies/case/delete";
 
-// добавил енам к роутам тк хочется всегда знать актуальные роуты и был принцып единой правды
-// ну и хочется их рассположить сразу на поддомене тк вдруг я когда нибудь захочу дописать эту шутку чтоб у меня был раздор в других модулях
+// добавил enum роутов тк хочется всегда знать актуальные роуты и был принцип единой правды
+// ну и хочется их расположить сразу на поддомене тк вдруг я когда-нибудь захочу дописать эту шутку чтоб у меня был раздор в других модулях
 const router = createBrowserRouter([
     {
         path: '/',
