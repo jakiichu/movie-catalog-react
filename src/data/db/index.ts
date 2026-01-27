@@ -15,12 +15,18 @@ class Database implements IMovieDatabase {
         this._db.push(IGetAllMovie);
     }
 
+    getOne(id: string) {
+
+        return this._db.find(i => i.id === id) as IMovieEntity;
+    }
+
     delete(id: string) {
         this._db = this._db.filter(i => i.id !== id);
     }
 
     update(id: string, update: IMovieEntity) {
         this._db = this._db.map(i => i.id === id ? update : i);
+        console.log(this._db, this._db.map(i => i.id === id ? update : i), update);
     }
 
     getAll(params: IGetAllMoviesForm) {
@@ -36,7 +42,7 @@ class Database implements IMovieDatabase {
 
         if (params.releaseYear) {
             result = result.filter(
-                movie => movie.releaseYear === params.releaseYear
+                movie => movie.releaseYear.toString() === params.releaseYear?.toString()
             );
         }
 

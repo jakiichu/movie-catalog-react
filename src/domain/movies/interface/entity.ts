@@ -3,7 +3,7 @@ interface IMovieEntity {
     id: string;                 // от себя уже добавил
     title: string;              // название
     genre: string;              // жанр
-    releaseYear: number;        // год выпуска
+    releaseYear: string;        // год выпуска
     director: string;           // режиссер
     actors: string[];           // актеры
     description?: string;       // аннотация (если имеется)

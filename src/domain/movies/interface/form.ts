@@ -1,3 +1,5 @@
+import type {IMovieEntity} from "./entity.ts";
+
 interface IGetAllMoviesForm {
 
     genre?: string;
@@ -9,4 +11,7 @@ interface IGetAllMoviesForm {
     search?: string;
 }
 
-export type {IGetAllMoviesForm}
+type ICreateMovieForm = IMovieEntity
+type IUpdateMovieForm = IMovieEntity
+
+export type {IGetAllMoviesForm, ICreateMovieForm, IUpdateMovieForm}

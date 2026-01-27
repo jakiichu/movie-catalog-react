@@ -5,6 +5,8 @@ import type {
     IDeleteMoviePort,
     IGetAllMovieDto,
     IGetAllMoviePort,
+    IGetOneMovieDto,
+    IGetOneMoviePort,
     IMovieDatabase,
     IMovieRepository,
     IUpdateMovieDto,
@@ -27,6 +29,12 @@ class MovieRepository implements IMovieRepository {
             setTimeout(() => {
                 resolve(this.database.getAll(port))
             }, 2000)
+        })
+    }
+
+    getOne(port: IGetOneMoviePort): Promise<IGetOneMovieDto> {
+        return new Promise((resolve) => {
+            resolve(this.database.getOne(port))
         })
     }
 
