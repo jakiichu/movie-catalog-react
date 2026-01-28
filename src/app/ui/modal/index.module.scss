@@ -9,13 +9,20 @@
 }
 
 .modal {
-  background: $bg-main-dark;
-  color: white;
   border-radius: 12px;
   width: 600px;
   max-height: 90vh;
   overflow: hidden;
   animation: fadeIn 0.15s ease;
+
+  background: $bg-main-light;
+  color: $bg-main-dark;
+
+  @media (prefers-color-scheme: dark) {
+
+    background: $bg-main-dark;
+    color: white;
+  }
 }
 
 .header {

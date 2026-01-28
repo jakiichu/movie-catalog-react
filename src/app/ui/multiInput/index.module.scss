@@ -6,8 +6,12 @@
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background: $bg-main-dark;
   padding-right: 22px;
+
+  background: $bg-main-light;
+  @media (prefers-color-scheme: dark) {
+    background: $bg-main-dark;
+  }
 }
 
 .input {
@@ -15,8 +19,14 @@
   min-width: 120px;
   background: transparent;
   border: none;
-  color: white;
   padding: 6px;
+
+  color: $bg-main-dark;
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+
+  }
 
   &:focus {
     outline: none;
@@ -28,7 +38,10 @@
   align-items: center;
   gap: 6px;
   padding: 4px 8px;
-  background: #2c2c2c;
+  background: $bg-core-light;
+  @media (prefers-color-scheme: dark) {
+    background: $bg-core-dark;
+  }
   border-radius: 6px;
   font-size: 14px;
 }

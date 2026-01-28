@@ -18,7 +18,13 @@
   min-width: 180px;
   padding: 12px;
 
-  background: $bg-core-dark;
+  background: $bg-core-light;
+
+  @media (prefers-color-scheme: dark) {
+    background: $bg-core-dark;
+
+  }
+
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08),
   0 4px 8px rgba(0, 0, 0, 0.04);

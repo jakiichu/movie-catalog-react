@@ -5,11 +5,18 @@
 
 .input {
   border: solid 1px #ccc;
-  background: $bg-main-dark;
-  color: white;
   border-radius: 8px;
   padding: 8px 10px;
   width: 100%;
+
+  background: $bg-main-light;
+  color: $bg-main-dark;
+
+  @media (prefers-color-scheme: dark) {
+    background: $bg-main-dark;
+    color: white;
+
+  }
 
   &:not(:placeholder-shown) {
     padding-right: 24px;
@@ -27,9 +34,10 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: $bg-main-dark;
-
-  background: $bg-main-dark;
+  background: $bg-main-light;
+  @media (prefers-color-scheme: dark) {
+    background: $bg-main-dark;
+  }
   border-radius: 8px;
   margin-top: 4px;
 
@@ -45,13 +53,19 @@
 .item {
   list-style: none;
   display: inline-block;
-  &::marker{
+
+  &::marker {
     display: none;
   }
+
   padding: 8px 10px;
   cursor: pointer;
 
   &:hover {
-    background: #2c2c2c;
+    background: $bg-core-light;
+
+    @media (prefers-color-scheme: dark) {
+      background: $bg-core-dark;
+    }
   }
 }

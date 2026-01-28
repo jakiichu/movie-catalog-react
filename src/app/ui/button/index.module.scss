@@ -1,25 +1,47 @@
 .button {
   padding: 4px;
   border-radius: 8px;
-  background-color: $bg-core-dark;
+  background-color: $bg-core-light;
   border: 1px solid transparent;
   transition: background-color .2s;
   cursor: pointer;
-  color: white;
+  color: $bg-core-dark;
+
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+
+    background: $bg-core-dark;
+  }
 
   &:hover {
-    background-color: rgba($bg-core-dark, 1.2);
+    background-color: rgba($bg-core-light, 1.2);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba($bg-core-dark, 1.2);
+    }
   }
 }
 
 .mainColor {
   &:hover {
-    background-color: $bg-core-dark;
+    background-color: $bg-core-light;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba($bg-core-dark, 1.2);
+    }
   }
+
+
 }
 
 .additionalColor {
   &:hover {
-    background-color: $bg-main-dark;
+    background-color: $bg-main-light;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $bg-main-dark;
+
+    }
   }
 }

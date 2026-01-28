@@ -1,0 +1,6 @@
+.icon {
+  color: $bg-core-dark;
+  @media (prefers-color-scheme: dark) {
+    color: $bg-core-light
+  }
+}

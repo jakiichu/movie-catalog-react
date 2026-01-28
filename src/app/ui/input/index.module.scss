@@ -1,10 +1,17 @@
 .input {
   border: solid 1px #ccc;
-  background: $bg-main-dark;
-  color: white;
+  background: $bg-main-light;
+  color: $bg-main-dark;
+
   border-radius: 8px;
   padding: 8px 10px;
   width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background: $bg-main-dark;
+    color: white;
+    
+  }
 }
 
 .wrapper {
