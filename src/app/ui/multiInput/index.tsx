@@ -59,7 +59,7 @@ const MultiAdd = ({
                 placeholder={placeholder}
                 className={style.input}
             />
-            <PlusIcon className={style.addIcon}/>
+            <PlusIcon onClick={() => addItem(inputValue)} className={style.addIcon}/>
         </div>
     );
 };
