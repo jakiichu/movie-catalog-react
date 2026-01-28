@@ -11,6 +11,21 @@
   gap: 8px;
 }
 
+.doubleItems {
+  width: 300px;
+
+  & > p {
+
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+}
+
 .buttonPopover {
   display: flex;
   flex-direction: row;
