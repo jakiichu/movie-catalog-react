@@ -10,10 +10,10 @@ const Route = (): ReactNode => {
     const handleClose = () => {
         navigate(ROUTER_PATH.movies)
     }
-    const {mutateWithReset, form} = useCreateMoviesPresenter()
+    const {mutateWithReset, form, isPending} = useCreateMoviesPresenter()
     return (
         <Modal title="Добавление" isOpen onClose={handleClose}>
-            <MoviesForm textButton="Добавить" form={form} onSubmit={mutateWithReset}/>
+            <MoviesForm isPending={isPending} textButton="Добавить" form={form} onSubmit={mutateWithReset}/>
         </Modal>
     );
 };

@@ -8,7 +8,7 @@ import MultiAdd from "@/app/ui/multiInput";
 import style from './index.module.scss'
 import Button from "@/app/ui/button";
 
-const MoviesForm = ({form, onSubmit, textButton}: IMoviesFormProps): ReactNode => {
+const MoviesForm = ({form, onSubmit, textButton, isPending}: IMoviesFormProps): ReactNode => {
     return (
         <form onSubmit={onSubmit} className={style.form}>
             <Input placeholder='Название'
@@ -61,7 +61,7 @@ const MoviesForm = ({form, onSubmit, textButton}: IMoviesFormProps): ReactNode =
                    errorMessage={form.formState.errors.description?.message}
                    {...form.register("description")}></Input>
 
-            <Button type='submit'>{textButton}</Button>
+            <Button disabled={isPending} type='submit'>{textButton}</Button>
         </form>
     );
 };

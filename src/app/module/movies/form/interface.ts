@@ -6,6 +6,7 @@ interface IMoviesFormProps {
     onSubmit: (e?: BaseSyntheticEvent<object, unknown, unknown> | undefined) => Promise<void>
     form: UseFormReturn<ICreateMovieForm, unknown, ICreateMovieForm>
     textButton: string
+    isPending: boolean
 }
 
 export type {IMoviesFormProps}

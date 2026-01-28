@@ -7,7 +7,7 @@ import {useUpdateMoviesPresenter} from "@/app/module/movies/case/edit/case/prese
 import type {IMovieEntity} from "@/domain/movies/interface";
 
 const MoviesDataWrapper = ({data}: { data: IMovieEntity }): ReactNode => {
-    const {form, mutateWithReset} = useUpdateMoviesPresenter(data)
+    const {form, mutateWithReset, isPending} = useUpdateMoviesPresenter(data)
     const navigate = useNavigate();
     const handleClose = () => {
         form.reset()
@@ -16,7 +16,7 @@ const MoviesDataWrapper = ({data}: { data: IMovieEntity }): ReactNode => {
 
     return (
         <Modal title="Редактирование" isOpen onClose={handleClose}>
-            <MoviesForm textButton="Редактировать" form={form} onSubmit={mutateWithReset}/>
+            <MoviesForm isPending={isPending} textButton="Редактировать" form={form} onSubmit={mutateWithReset}/>
         </Modal>
     );
 };
