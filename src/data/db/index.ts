@@ -48,25 +48,25 @@ class Database implements IMovieDatabase {
 
         if (params.createdFrom) {
             result = result.filter(
-                movie => movie.createdAt >= params.createdFrom!
+                movie => movie.createdAt >= new Date(params.createdFrom!)
             );
         }
 
         if (params.createdTo) {
             result = result.filter(
-                movie => movie.createdAt <= params.createdTo!
+                movie => movie.createdAt <= new Date(params.createdTo!)
             );
         }
 
         if (params.updatedFrom) {
             result = result.filter(
-                movie => movie.updatedAt >= params.updatedFrom!
+                movie => movie.updatedAt >= new Date(params.updatedFrom!)
             );
         }
 
         if (params.updatedTo) {
             result = result.filter(
-                movie => movie.updatedAt <= params.updatedTo!
+                movie => movie.updatedAt <= new Date(params.updatedTo!)
             );
         }
 

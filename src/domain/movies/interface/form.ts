@@ -4,10 +4,10 @@ interface IGetAllMoviesForm {
 
     genre?: string;
     releaseYear?: number;
-    createdFrom?: Date;
-    createdTo?: Date;
-    updatedFrom?: Date;
-    updatedTo?: Date;
+    createdFrom?: string;
+    createdTo?: string;
+    updatedFrom?: string;
+    updatedTo?: string;
     search?: string;
 }
 
